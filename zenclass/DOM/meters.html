@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ var input1 = document.createElement("input");
+input1.setAttribute("id","centimeter");
+document.body.appendChild(input1);
+
+function length(){
+
+var lengthincentimeter = Number(document.getElementById("centimeter").value);
+var meter = lengthincentimeter/100;
+var kilometer = meter/1000;
+document.getElementById("tometer").innerHTML ="length into meter:" + meter;
+document.getElementById("tokilo").innerHTML = "length into kilometer:"+ kilometer;
+}
+var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","tometer");
+    mybutton.setAttribute("onclick","length()");
+    mybutton.innerHTML= "length into meter";
+    document.body.appendChild(mybutton); 
+    var mybutton1 = document.createElement("button");
+    mybutton1.style.width="200px";
+    mybutton1.style.height="50px";
+    mybutton1.setAttribute("id","tokilo");
+    mybutton1.setAttribute("onclick","length()");
+    mybutton1.innerHTML= "length into kilometer";
+    document.body.appendChild(mybutton1); 
+      
+    
+    
+</script>
+</body>
+</html>

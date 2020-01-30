@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+
+    <script>
+
+var mybutton = document.createElement("button");
+mybutton.addEventListener("click",clearTimeout(time));
+document.body.appendChild(mybutton);
+    
+      function time(){
+        var arrayTime=[]
+        var date = new Date()
+       var displaydate = date.getUTCDate()
+       var displayhours = date.getHours();
+       var displaymintue = date.getMinutes();
+       var displayseconds = date.getSeconds();
+       var displaymillisecond = date.getMilliseconds();
+      var runningTime= displayhours +":"+ displaymintue +":" + displayseconds +":"+ displaymillisecond;
+      document.getElementById("digitalclock").innerHTML ="DIGITAL TIME: " + runningTime ;
+      arrayTime.push(runningTime);
+       var stoplapse ="DIGITAL TIME: "+ arrayTime;
+       localStorage.setItem("laps","stoplapse");
+}
+
+
+
+var mybutton1 = document.createElement("button");
+mybutton1.setAttribute("id","digitalclock");
+mybutton1.style.marginLeft="100px";
+mybutton1.style.width="150px";
+mybutton1.style.height="50px";
+mybutton1.textContent="CLICK TO GET TIME";
+
+mybutton1.setAttribute("onclick","setInterval(time,1)");
+
+document.body.appendChild(mybutton1)
+
+
+
+
+</script>
+</body>
+</html>

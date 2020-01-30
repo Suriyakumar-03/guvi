@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+#perimeter{
+
+    height:50px;
+        width:150px;
+}
+
+
+</style>
+
+
+<body>
+    <script>
+    var input1 = document.createElement("input");
+    input1.setAttribute("id","lengthrectangle");
+    document.body.appendChild(input1);
+    var input2 = document.createElement("input");
+    input2.setAttribute("id","breathrectangle");
+    document.body.appendChild(input2);
+   
+ function perimeter(){
+        var lengthofRectange =  Number(document.getElementById("lengthrectangle").value)
+    var breathofRectange =  Number(document.getElementById("breathrectangle").value)
+
+     var perimeterofRectangle = 2*(lengthofRectange+breathofRectange);
+     document.getElementById("POR").innerHTML ="perimeterofRectangle:"+ perimeterofRectangle;
+    }
+     var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","POR")
+    mybutton.setAttribute("onclick","perimeter()");
+    mybutton.innerHTML= "perimeterofRectangle" ;
+    document.body.appendChild(mybutton);
+    
+  
+           
+        
+        
+        
+    </script>
+</body>
+</html>

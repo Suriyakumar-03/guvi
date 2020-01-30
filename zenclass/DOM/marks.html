@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var input1 = document.createElement("input");
+ input1.setAttribute("id","a");
+ document.body.appendChild(input1);
+var input2 = document.createElement("input");
+ input2.setAttribute("id","b");
+ document.body.appendChild(input2);
+ var input3 = document.createElement("input");
+  input3.setAttribute("id","c");
+    document.body.appendChild(input3);
+    var input4 = document.createElement("input");
+    input4.setAttribute("id","d");
+    document.body.appendChild(input4);
+    var input5= document.createElement("input");
+    input5.setAttribute("id","e");
+    document.body.appendChild(input5);
+
+function marks(){
+
+var tamil = Number(document.getElementById("a").value);
+var english = Number(document.getElementById("b").value);
+var social = Number(document.getElementById("c").value);
+var science = Number(document.getElementById("d").value);
+var maths = Number(document.getElementById("e").value);
+var total = tamil+english+science+social+maths;
+var average = (tamil+english+science+social+maths)/5;
+var percentage= ((tamil+english+science+social+maths)/500);
+
+document.getElementById("TOT").innerHTML = "TOTAL:"+total;
+document.getElementById("AVG").innerHTML ="AVERAGE:"+average;
+document.getElementById("PERCENTAGE").innerHTML ="PERCENTAGE:"+percentage;
+
+}
+      
+   
+var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","TOT")
+    mybutton.setAttribute("onclick","marks()");
+    mybutton.innerHTML= "TOTAL" ;
+    document.body.appendChild(mybutton);
+
+    var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","AVG")
+    mybutton.setAttribute("onclick","marks()");
+    mybutton.innerHTML= "AVERAGE" ;
+    document.body.appendChild(mybutton);
+    var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","PERCENTAGE")
+    mybutton.setAttribute("onclick","marks()");
+    mybutton.innerHTML= "PERCENTAGE" ;
+    document.body.appendChild(mybutton);
+
+
+    
+
+
+
+</script>
+</body>
+</html>

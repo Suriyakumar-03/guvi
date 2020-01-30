@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var input1 = document.createElement("input");
+ input1.setAttribute("id","a");
+ document.body.appendChild(input1);
+var input2 = document.createElement("input");
+ input2.setAttribute("id","b");
+ document.body.appendChild(input2);
+ var input3 = document.createElement("input");
+  input3.setAttribute("id","c");
+    document.body.appendChild(input3);
+    var input4 = document.createElement("input");
+    input4.setAttribute("id","d");
+    document.body.appendChild(input4);
+function CI(){
+
+var p = Number(document.getElementById("a").value);
+var t = Number(document.getElementById("b").value);
+var r = Number(document.getElementById("c").value);
+var n = Number(document.getElementById("d").value);
+
+var ci1 = 1+(r/n);
+var ci2 = Math.pow((n*t),ci1);
+var ci = p*ci2;
+document.getElementById("ci0").innerHTML ="COMPOUNDINTEREST:"+ci;
+
+}
+var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","ci0")
+    mybutton.setAttribute("onclick","CI()");
+    mybutton.innerHTML= "COMPOUNDINTEREST" ;
+    document.body.appendChild(mybutton);
+    
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var input1 = document.createElement("input");
+input1.setAttribute("id","radius");
+document.body.appendChild(input1);
+
+function circle(){
+var radiusofcircle = Number(document.getElementById("radius").value);
+var diamter = 2*radiusofcircle;
+var circumference = 3.14*diamter;
+var area = 3.14*radiusofcircle*radiusofcircle
+document.getElementById("DOC").innerHTML= "DIAMETER OF CIRCLE :"+diamter;
+document.getElementById("COC").innerHTML= "CIRCUMFERENCE OF CIRCLE :"+circumference;
+document.getElementById("AOC").innerHTML= "AREA OF CIRCLE :"+area;
+}
+
+var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","DOC")
+    mybutton.setAttribute("onclick","circle()");
+    mybutton.innerHTML= "DIAMETER OF CIRCLE" ;
+    document.body.appendChild(mybutton); 
+    
+    var mybutton1 = document.createElement("button");
+    mybutton1.style.width="200px";
+    mybutton1.style.height="50px";
+    mybutton1.setAttribute("id","COC")
+    mybutton1.setAttribute("onclick","circle()");
+    mybutton1.innerHTML= "CIRCUMFERENCE OF CIRCLE" ;
+    document.body.appendChild(mybutton1);   
+            
+    var mybutton2 = document.createElement("button");
+    mybutton2.style.width="200px";
+    mybutton2.style.height="50px";
+    mybutton2.setAttribute("id","AOC")
+    mybutton2.setAttribute("onclick","circle()");
+    mybutton2.innerHTML= "CIRCUMFERENCE OF CIRCLE" ;
+    document.body.appendChild(mybutton2);  
+    
+</script>
+</body>
+</html>

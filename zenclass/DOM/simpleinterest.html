@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var input1 = document.createElement("input");
+ input1.setAttribute("id","a");
+ document.body.appendChild(input1);
+var input2 = document.createElement("input");
+ input2.setAttribute("id","b");
+ document.body.appendChild(input2);
+ var input3 = document.createElement("input");
+  input3.setAttribute("id","c");
+  document.body.appendChild(input3);
+
+function SI(){
+
+var p = Number(document.getElementById("a").value);
+var t = Number(document.getElementById("b").value);
+var r = Number(document.getElementById("c").value);
+
+var simpleInterest = p*(1+(r*t));
+document.getElementById("si").innerHTML= "SIMPLEINTEREST:"+simpleInterest;
+
+}
+var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","si")
+    mybutton.setAttribute("onclick","SI()");
+    mybutton.innerHTML= "SIMPLEINTEREST" ;
+    document.body.appendChild(mybutton);
+    
+  
+
+
+
+
+</script> 
+</body>
+</html>

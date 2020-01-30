@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var input1 = document.createElement("input");
+input1.setAttribute("id","celisus1"); 
+document.body.appendChild(input1); 
+
+var input2 = document.createElement("input");
+input2.setAttribute("id","farenheit2"); 
+document.body.appendChild(input2);  
+
+
+   
+function temperatureToFarenheit(){
+var celisus = Number(document.getElementById("celisus1").value);
+
+var farenheit =Math.floor((celisus*(9/5)+32));
+document.getElementById("farenheit1").innerHTML = "farenheit:"+farenheit;
+}    
+ 
+
+function temperatureTocelsius(){
+var farenheit = Number(document.getElementById("farenheit2").value);
+
+var celsius =Math.floor( ((farenheit-32)*5/9));
+document.getElementById("celisus2").innerHTML = "celsius:"+celsius;
+}    
+    
+
+var mybutton = document.createElement("button");
+mybutton.style.width="150px";
+mybutton.style.height="50px";
+mybutton.setAttribute("id","farenheit1");
+mybutton.setAttribute("onclick","temperatureToFarenheit()");
+mybutton.innerHTML="CONVERT TO FARENHEIT";
+document.body.appendChild(mybutton);
+    
+
+var mybutton = document.createElement("button");
+mybutton.style.width="150px";
+mybutton.style.height="50px";
+mybutton.setAttribute("id","celisus2");
+mybutton.setAttribute("onclick","temperatureTocelsius()");
+mybutton.innerHTML="CONVERT TO CELSIUS";
+document.body.appendChild(mybutton);
+    
+
+    
+</script>
+</body>
+</html>

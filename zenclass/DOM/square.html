@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ var input1 = document.createElement("input");
+    input1.setAttribute("id","a");
+    document.body.appendChild(input1);
+   
+   
+function square(){
+
+var value1 = Number(document.getElementById("a").value);
+
+var squareRoot = Math.sqrt(value1)
+document.getElementById("square1").innerHTML ="squareRoot:"+squareRoot;
+}
+var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","square1");
+    mybutton.setAttribute("onclick","square()");
+    mybutton.innerHTML= "convert to squareRoot " ;
+    document.body.appendChild(mybutton);
+
+
+
+
+</script> 
+</body>
+</html>

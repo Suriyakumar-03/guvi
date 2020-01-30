@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #value1{
+        height:50px;
+        width:150px;
+        margin-left: 30px;
+    }
+    #value2{
+        height:50px;
+        width:150px;
+        margin-left: 30px;
+     }
+     #addition{
+        height:50px;
+        width:150px;
+}
+    
+    
+    
+    </style>
+</head>
+VALUE1<input id="value1" >
+VALUE2<input id="value2" >
+<button  onclick="add()">ADD</button>
+<input id="addition1">
+
+
+<body>
+    <script>   
+   function add() {
+var number1= Number(document.getElementById("value1").innerHTML)
+
+ var number2=Number(document.getElementById("value2").value) 
+var addition = number1+number2;
+document.getElementById("addition1").value= addition;   
+   }    
+    </script>
+</body>
+</html>

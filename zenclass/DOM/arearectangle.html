@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+// creating two inputs for length and breadth
+var input1 = document.createElement("input");
+input1.setAttribute("id","lengthofrectangle"); 
+document.body.appendChild(input1);   
+var input2 = document.createElement("input");
+input2.setAttribute("id","breadthofrectangle");  
+document.body.appendChild(input2);   
+//for find area of rectangle;
+function areaofrectangle (){
+
+var length = Number(document.getElementById("lengthofrectangle").value);
+var breadth = Number(document.getElementById("breadthofrectangle").value);
+
+var area = length*breadth;
+document.getElementById("AOR").innerHTML="AREA OF RECTANGLE:"+area ;
+
+}
+var mybutton = document.createElement("button");
+mybutton.style.width="150px";
+mybutton.style.height="50px";
+mybutton.setAttribute("id","AOR");
+mybutton.setAttribute("onclick","areaofrectangle()");
+mybutton.innerHTML="AREA OF RECTANGLE";
+document.body.appendChild(mybutton);
+
+
+
+</script>   
+</body>
+</html>

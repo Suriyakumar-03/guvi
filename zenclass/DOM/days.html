@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var input1 = document.createElement("input");
+    input1.setAttribute("id","day1"); 
+    document.body.appendChild(input1); 
+     function calender(){
+var day = Number(document.getElementById("day1").value);
+var year = day/365;
+var week = day/7;
+document.getElementById("year1").innerHTML ="DAYS TO YEAR:"+year;
+document.getElementById("week1").innerHTML ="DAYS TO WEEK:"+ week;
+
+     }
+     var mybutton = document.createElement("button");
+mybutton.style.width="250px";
+mybutton.style.height="50px";
+mybutton.setAttribute("id","year1");
+mybutton.setAttribute("onclick","calender()");
+mybutton.innerHTML="DAYS TO YEAR";
+document.body.appendChild(mybutton);
+var mybutton = document.createElement("button");
+mybutton.style.marginLeft="50px";
+mybutton.style.width="250px";
+mybutton.style.height="50px";
+mybutton.setAttribute("id","week1");
+mybutton.setAttribute("onclick","calender()");
+mybutton.innerHTML="DAYS TO WEEK";
+document.body.appendChild(mybutton);
+
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

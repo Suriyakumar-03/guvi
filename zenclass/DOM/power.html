@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ var input1 = document.createElement("input");
+    input1.setAttribute("id","a");
+    document.body.appendChild(input1);
+    var input2 = document.createElement("input");
+    input2.setAttribute("id","b");
+    document.body.appendChild(input2);
+   
+function power(){
+
+var value1 = Number(document.getElementById("a").value);
+var value2 = Number(document.getElementById("b").value);
+
+var exponentionalPower = Math.pow(value2,value1)
+document.getElementById("power1").innerHTML = "exponentionalPower:"+exponentionalPower;
+}
+var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","power1")
+    mybutton.setAttribute("onclick","power()");
+    mybutton.innerHTML= "convert to  exponentionalPower" ;
+    document.body.appendChild(mybutton);
+
+
+
+
+</script>
+</body>
+</html>

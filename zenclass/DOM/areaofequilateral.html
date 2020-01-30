@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ var input1 = document.createElement("input");
+    input1.setAttribute("id","a");
+    document.body.appendChild(input1);
+   
+ function area(){
+var BASE = Number(document.getElementById("a").value);
+var findArea =  ((Math.sqrt(3)/4)* BASE*BASE);
+document.getElementById("area1").innerHTML = "AREA:"+findArea;
+}
+
+var mybutton = document.createElement("button");
+    mybutton.style.width="200px";
+    mybutton.style.height="50px";
+    mybutton.setAttribute("id","area1");
+    mybutton.setAttribute("onclick","area()");
+    mybutton.innerHTML= "FIND AREA";
+    document.body.appendChild(mybutton);
+
+
+
+
+
+</script>  
+</body>
+</html>
